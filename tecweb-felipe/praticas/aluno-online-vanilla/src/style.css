@@ -1,114 +1,111 @@
-/* -----------------------------------------------------------
-   1. Definição de Variáveis CSS
-   (Nota: Corrigido o valor de --cor-fundo para um hexadecimal válido)
-   ----------------------------------------------------------- */
 :root {
-    --cor-fundo: #e9e9e9; /* Valor corrigido de #e9e9e9e */
-    --cor-texto: #303030;
+  --cor-fundo: #e9e9e9;
+  --cor-texto: #303030;
+  --cor-sidebar: #ededed;
+  --cor-card-header: #e0e0e0;
+  --cor-branco: #fff;
+  --cor-borda: #d1d1d1;
 }
 
-/* -----------------------------------------------------------
-   2. Reset básico de margin, padding e box-sizing
-   ----------------------------------------------------------- */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* -----------------------------------------------------------
-   3. Definição da Tipografia padrão no body
-   ----------------------------------------------------------- */
 body {
-    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  display: flex;
+  min-height: 100vh;
 }
 
-/* -----------------------------------------------------------
-   4. Utilização do Flexbox na área principal da página
-   ----------------------------------------------------------- */
-.layout-principal {
-    display: flex; /* Organiza barra lateral e conteúdo principal lado a lado */
-    min-height: 100vh; /* Garante que ocupe a altura total da tela */
+aside {
+  width: 260px;
+  background-color: var(--cor-sidebar);
+  padding: 40px 25px;
+  border-right: 1px solid var(--cor-borda);
 }
 
-/* Definir largura fixa para a barra lateral */
-.barra-lateral {
-    width: 250px; /* Largura fixa */
-    background-color: #f4f4f4; /* Cor de fundo para visualização */
+aside header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+}
+
+nav ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+
+nav ul li {
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--cor-texto);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+main {
+  flex: 1;
+  padding: 40px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+main > header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+main > header h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+figure img {
+  width: 60px;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+article {
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+article header h3 {
+  background-color: var(--cor-card-header);
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+article ul {
+  padding: 20px;
+  list-style-position: inside;
+}
+
+@media (width <= 768px) {
+  body {
+    flex-direction: column;
+  }
+
+  aside {
+    width: 100%;
+  }
+
+  main {
     padding: 20px;
-    border-right: 1px solid #ccc;
-}
-
-/* Permitir que a área principal ocupe o espaço restante */
-.conteudo-principal {
-    flex: 1; /* Ocupa todo o espaço restante */
-    padding: 20px;
-}
-
-/* -----------------------------------------------------------
-   5. Utilização do Flexbox na barra superior
-   ----------------------------------------------------------- */
-.barra-superior {
-    display: flex; /* Alinha horizontalmente a saudação e o avatar */
-    justify-content: space-between; /* Distribui os elementos com space-between */
-    align-items: center; /* Alinha verticalmente os elementos ao centro */
-    padding: 10px 0;
-    margin-bottom: 20px;
-}
-
-/* Estilo básico para visualização do avatar */
-.avatar {
-    width: 40px;
-    height: 40px;
-    background-color: #ccc;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-}
-
-/* -----------------------------------------------------------
-   6. Organização dos blocos verticalmente com espaçamento adequado
-   ----------------------------------------------------------- */
-.container-blocos {
-    display: flex;
-    flex-direction: column; /* Organiza os blocos verticalmente */
-    gap: 20px; /* Espaçamento adequado entre os elementos */
-}
-
-/* -----------------------------------------------------------
-   7. Estilização dos cartões
-   ----------------------------------------------------------- */
-.cartao {
-    background-color: #fff;
-    border: 1px solid #ccc; /* Borda */
-    padding: 20px; /* Espaçamento interno */
-    border-radius: 8px; /* Cantos arredondados */
-}
-
-/* -----------------------------------------------------------
-   8. Utilização de @media para ajustar a disposição (Responsividade)
-   Para telas menores que 768px
-   ----------------------------------------------------------- */
-@media (max-width: 768px) {
-    /* Reorganizar o layout principal para melhor visualização em dispositivos móveis */
-    .layout-principal {
-        flex-direction: column; /* Altera a direção do flex de row para column */
-    }
-
-    /* Garante que os elementos não apresentem comprimidos ou sobrepostos */
-    .barra-lateral {
-        width: 100%; /* A barra lateral ocupa toda a largura */
-        border-right: none;
-        border-bottom: 1px solid #ccc;
-    }
-
-    .conteudo-principal {
-        width: 100%; /* O conteúdo principal ocupa toda a largura */
-    }
+  }
 }

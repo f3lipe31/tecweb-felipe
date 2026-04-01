@@ -1,53 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Implementação de Requisitos CSS</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aluno Online</title>
+  <link rel="stylesheet" href="./src/style.css">
 </head>
+
 <body>
 
-    <div class="layout-principal">
-        
-        <aside class="barra-lateral">
-            <h3>Sidebar</h3>
-            <nav>
-                <ul>
-                    <li>Início</li>
-                    <li>Perfil</li>
-                    <li>Configurações</li>
-                </ul>
-            </nav>
-        </aside>
+  <aside>
+    <header>
+      <h2>🎓 Aluno Online</h2>
+    </header>
 
-        <main class="conteudo-principal">
-            
-            <header class="barra-superior">
-                <div class="saudacao">Olá, Usuário!</div>
-                <div class="avatar">U</div>
-            </header>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Notas</a></li>
+        <li><a href="#">Faltas</a></li>
+        <li><a href="#">Boletos</a></li>
+        <li><a href="#">Requerimentos</a></li>
+        <li><a href="#">Sair</a></li>
+      </ul>
+    </nav>
+  </aside>
 
-            <section class="container-blocos">
-                
-                <article class="cartao">
-                    <h4>Bloco 1</h4>
-                    <p>Conteúdo do primeiro cartão. Possui borda, padding e cantos arredondados.</p>
-                </article>
+  <main>
 
-                <article class="cartao">
-                    <h4>Bloco 2</h4>
-                    <p>Conteúdo do segundo cartão. Organizado verticalmente em relação aos outros.</p>
-                </article>
+    <!-- HEADER PRINCIPAL -->
+    <header>
+      <section>
+        <h1>Olá, Aluno!</h1>
+        <p>Bem-vindo ao portal do aluno</p>
+      </section>
 
-                <article class="cartao">
-                    <h4>Bloco 3</h4>
-                    <p>Conteúdo do terceiro cartão. O espaçamento é adequado.</p>
-                </article>
+      <figure>
+        <img src="avatar.png" alt="Avatar do usuário">
+      </figure>
+    </header>
 
-            </section>
-        </main>
-    </div>
+    <!-- CONTEÚDO -->
+    <section>
+
+      <article>
+        <header>
+          <h3>Mural de Avisos</h3>
+        </header>
+        <ul>
+          <li>Inscrição para o projeto de extensão</li>
+          <li>Eleição para representante de turma</li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <h3>Calendário Acadêmico</h3>
+        </header>
+        <ul>
+          <li>23/02 - Início do período letivo 2026-1</li>
+          <li>25/04 - Prazo final para aplicação da P1</li>
+          <li>23/06 - Prazo final para aplicação da P2</li>
+          <li>04/07 - Fim do período letivo 2026-1</li>
+        </ul>
+      </article>
+
+      <article>
+        <header>
+          <h3>Minhas Disciplinas</h3>
+        </header>
+        <ul>
+          <li>Bancos de Dados I (HMDC253)</li>
+          <li>Estrutura de Dados (MDC127)</li>
+          <li>Tecnologias Web (HMDC251)</li>
+        </ul>
+      </article>
+
+    </section>
+
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
 
 </body>
 </html>
