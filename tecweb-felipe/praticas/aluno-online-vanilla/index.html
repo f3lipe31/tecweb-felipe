@@ -1,12 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/javascript.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aluno Online</title>
-  </head>
-  <body>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementação de Requisitos CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="layout-principal">
+        
+        <aside class="barra-lateral">
+            <h3>Sidebar</h3>
+            <nav>
+                <ul>
+                    <li>Início</li>
+                    <li>Perfil</li>
+                    <li>Configurações</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="conteudo-principal">
+            
+            <header class="barra-superior">
+                <div class="saudacao">Olá, Usuário!</div>
+                <div class="avatar">U</div>
+            </header>
+
+            <section class="container-blocos">
+                
+                <article class="cartao">
+                    <h4>Bloco 1</h4>
+                    <p>Conteúdo do primeiro cartão. Possui borda, padding e cantos arredondados.</p>
+                </article>
+
+                <article class="cartao">
+                    <h4>Bloco 2</h4>
+                    <p>Conteúdo do segundo cartão. Organizado verticalmente em relação aos outros.</p>
+                </article>
+
+                <article class="cartao">
+                    <h4>Bloco 3</h4>
+                    <p>Conteúdo do terceiro cartão. O espaçamento é adequado.</p>
+                </article>
+
+            </section>
+        </main>
+    </div>
+
+</body>
 </html>
